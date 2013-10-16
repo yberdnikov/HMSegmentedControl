@@ -324,6 +324,14 @@
         self.indexChangeBlock(index);
 }
 
+- (void)setSectionTitles:(NSArray *)sectionTitles
+{
+    _sectionTitles = sectionTitles;
+    
+    if (sectionTitles)
+        [self updateSegmentsRects];
+}
+
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
     
